@@ -258,3 +258,5 @@ a9e1c36c671666e79706791e556d5100 Vuforia.UnityExtensions.dll:Vuforia.VuMarkBehav
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.WorldCursor
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.GazeGestureManager
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.SphereCommands
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.SpeechManager
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.SphereSounds
