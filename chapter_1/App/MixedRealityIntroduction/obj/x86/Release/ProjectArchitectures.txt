@@ -1,0 +1,1 @@
+C:\Users\Kipp\Documents\repos\MixedRealityIntroduction\chapter_1\App\MixedRealityIntroduction\MixedRealityIntroduction.csproj;x86
