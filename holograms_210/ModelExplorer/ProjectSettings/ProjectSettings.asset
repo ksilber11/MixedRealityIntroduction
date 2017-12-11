@@ -528,7 +528,7 @@ PlayerSettings:
   m_MobileRenderingPath: 1
   metroPackageName: ModelExplorer
   metroPackageVersion: 1.0.0.0
-  metroCertificatePath: C:\Users\Kipp\Documents\repos\MixedRealityIntroduction\holograms_210\ModelExplorer\Assets\WSATestCertificate.pfx
+  metroCertificatePath: Assets\WSATestCertificate.pfx
   metroCertificatePassword: 
   metroCertificateSubject: DefaultCompany
   metroCertificateIssuer: DefaultCompany
