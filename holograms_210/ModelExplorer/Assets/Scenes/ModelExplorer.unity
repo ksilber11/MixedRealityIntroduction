@@ -323,6 +323,7 @@ GameObject:
   - component: {fileID: 670344217}
   - component: {fileID: 670344219}
   - component: {fileID: 670344220}
+  - component: {fileID: 670344221}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -387,6 +388,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e852b8ea6948f5a4eac1085daf22ad2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &670344221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 670344216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49808de887327614892827c504d4ccbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &854973585 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 196258, guid: dcfff29e15ef0304dbfabcb30a37ad97, type: 2}
@@ -420,18 +432,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TargetFeedbackSound: {fileID: 0}
---- !u!114 &905765736
+--- !u!1 &1612599435 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 149204, guid: db5d50d60b0863341be4ce64455775a8, type: 2}
+  m_PrefabInternal: {fileID: 489312139}
+--- !u!114 &1612599436
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 905765731}
+  m_GameObject: {fileID: 1612599435}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 204c79f10449a0e4cb82484fdd5d8ae4, type: 3}
+  m_Script: {fileID: 11500000, guid: c4f183c196d7b0c44946e38295dbae31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PivotAxis: 2
+  ObjectToTagAlong: {fileID: 184316, guid: 604d3361bf8ce5a449cab6365160b0eb, type: 2}
 --- !u!1001 &1858523974
 Prefab:
   m_ObjectHideFlags: 0
