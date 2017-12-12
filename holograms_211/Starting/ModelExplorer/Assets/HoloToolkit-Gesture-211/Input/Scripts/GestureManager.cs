@@ -27,22 +27,22 @@ namespace Academy.HoloToolkit.Unity
             /* TODO: DEVELOPER CODING EXERCISE 2.b */
 
             // 2.b: Instantiate the NavigationRecognizer.
-
+            NavigationRecognizer = new GestureRecognizer();
 
             // 2.b: Add Tap and NavigationX GestureSettings to the NavigationRecognizer's RecognizableGestures.
-
+            NavigationRecognizer.SetRecognizableGestures(GestureSettings.Tap | GestureSettings.NavigationX);
 
 
             // 2.b: Register for the Tapped with the NavigationRecognizer_Tapped function.
-
+            NavigationRecognizer.Tapped += NavigationRecognizer_Tapped;
             // 2.b: Register for the NavigationStarted with the NavigationRecognizer_NavigationStarted function.
-
+            NavigationRecognizer.NavigationStarted += NavigationRecognizer_NavigationStarted;
             // 2.b: Register for the NavigationUpdated with the NavigationRecognizer_NavigationUpdated function.
-
+            NavigationRecognizer.NavigationUpdated += NavigationRecognizer_NavigationUpdated;
             // 2.b: Register for the NavigationCompleted with the NavigationRecognizer_NavigationCompleted function. 
-
+            NavigationRecognizer.NavigationCompleted += NavigationRecognizer_NavigationCompleted;
             // 2.b: Register for the NavigationCanceled with the NavigationRecognizer_NavigationCanceled function. 
-
+            NavigationRecognizer.NavigationCanceled += NavigationRecognizer_NavigationCanceled;
 
             // Instantiate the ManipulationRecognizer.
             ManipulationRecognizer = new GestureRecognizer();
@@ -63,7 +63,12 @@ namespace Academy.HoloToolkit.Unity
         void OnDestroy()
         {
             // 2.b: Unregister the Tapped and Navigation events on the NavigationRecognizer.
+            NavigationRecognizer.Tapped -= NavigationRecognizer_Tapped;
 
+            NavigationRecognizer.NavigationStarted -= NavigationRecognizer_NavigationStarted;
+            NavigationRecognizer.NavigationUpdated -= NavigationRecognizer_NavigationUpdated;
+            NavigationRecognizer.NavigationCompleted -= NavigationRecognizer_NavigationCompleted;
+            NavigationRecognizer.NavigationCanceled -= NavigationRecognizer_NavigationCanceled;
 
             // Unregister the Manipulation events on the ManipulationRecognizer.
             ManipulationRecognizer.ManipulationStarted -= ManipulationRecognizer_ManipulationStarted;
@@ -110,31 +115,30 @@ namespace Academy.HoloToolkit.Unity
         private void NavigationRecognizer_NavigationStarted(NavigationStartedEventArgs obj)
         {
             // 2.b: Set IsNavigating to be true.
+            IsNavigating = true;
 
-
-            // 2.b: Set NavigationPosition to be relativePosition.
-
+            NavigationPosition = Vector3.zero;
         }
 
 		private void NavigationRecognizer_NavigationUpdated(NavigationUpdatedEventArgs obj)
         {
             // 2.b: Set IsNavigating to be true.
+            IsNavigating = true;
 
-
-            // 2.b: Set NavigationPosition to be relativePosition.
-
+            NavigationPosition = obj.normalizedOffset;
         }
 
 		private void NavigationRecognizer_NavigationCompleted(NavigationCompletedEventArgs obj)
         {
             // 2.b: Set IsNavigating to be false.
+            IsNavigating = false;
 
         }
 
         private void NavigationRecognizer_NavigationCanceled(NavigationCanceledEventArgs obj)
         {
             // 2.b: Set IsNavigating to be false.
-
+            IsNavigating = false;
         }
 
         private void ManipulationRecognizer_ManipulationStarted(ManipulationStartedEventArgs obj)
